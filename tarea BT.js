@@ -53,14 +53,40 @@ class BinaryTree{
         }
     }
 
-    0
+    operator(sign, nodee, nodeee){
+        while (sign==='+') {
+            return nodee+nodeee;
+        }
+        while (sign==='-') {
+            return nodee-nodeee;
+        }
+        while (sign==='*') {
+            return nodee*nodeee;
+        }
+        while (sign==='/') {
+            return nodee/nodeee;
+        }
+    }
+
 }
 
 let tree=new BinaryTree();
 let node=new Node(4);
 tree.add(node);
-node=new Node(1);
+node=new Node('+');
 tree.add(node);
 node=new Node(5);
+tree.add(node);
+node=new Node('-');
+tree.add(node);
+node=new Node(6);
+tree.add(node);
+node=new Node('/');
+tree.add(node);
+node=new Node(2);
+tree.add(node);
+node=new Node('*');
+tree.add(node);
+node=new Node(7);
 tree.add(node);
 console.log(tree.inorder());
