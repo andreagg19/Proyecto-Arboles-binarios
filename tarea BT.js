@@ -69,18 +69,7 @@ class BinaryTree{
     }
 
     postOrder(){
-        let result=[];
-        let ope=[];
-        while(ope.length > 0){
-            if(!isNaN(ope[ope.length-1])){
-                result.push(ope.pop());
-            }else{
-                let aux = ope.pop();
-                result.push(this.operator(aux, result.pop(), result.pop()))
-            }
-        }
-        return result[0];
-            
+      
     }        
 
     preOrder(){
