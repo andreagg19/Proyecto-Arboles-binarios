@@ -68,12 +68,34 @@ class BinaryTree{
         }
     }
 
-    postOrder(){
-      
-    }        
+        preOrder(){
+        let aux=[];
+        let pre=[];
+        for (let i=pre.length-1; i>=0; i--) {
+            if (!isNaN(pre[i])) {
+                aux.push(Number(pre[i]));
+            }
+        let nodex1=aux.pop();
+        let nodex2=aux.pop();
+        let result=this.operator(pre[i], nodex1, nodex2)
+        aux.push(result);
+        }
+        return aux.pop();
+    }
 
-    preOrder(){
-        
+    postOrder(){
+        let aux=[];
+        let post=[];
+        for (let j=0; i<post.length; j++) {
+            if (!isNaN(post[j])) {
+                aux.push(Number(post[j]));
+            }
+        let nodex1=aux.pop();
+        let nodex2=aux.pop();
+        let result=this.operator(post[j], nodex1, nodex2)
+        aux.push(result);
+        }
+        return aux.pop();
     }
 
     }
